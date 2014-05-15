@@ -1,5 +1,5 @@
 <?php
-$version = "0.8";
+$version = "0.85";
 $debug = isset($_GET['debug']) ? true : "";
 $seed = isset($_POST['seed']) ? htmlspecialchars($_POST['seed']) : (string)rand();
 $genrelock = isset($_POST['genrelock']) ? $_POST['genrelock'] : 'off';
@@ -65,6 +65,7 @@ if ($seed == "") {
 <p id="hinttext"></p>
 <span id="newhint" class="clickable" onclick="javascript:getNewHint();">Get Another!</span>
 </div>
+<p>Problem with the generator? Idea for the generator? Report it to the <a href="https://bitbucket.org/alamantusgamedev/game-idea-generator" target="_blank">Issue Tracker</a>!</p>
 </div>
 
 </div>
