@@ -15,80 +15,6 @@ function generatevalues(seed, genre) {
 		Math.seedrandom();
 	}
 	
-	gt=Math.floor(Math.random() * 60);	//Gives game type a value between 0 and 9, providing 10 game type options
-	n1=Math.floor(Math.random() * 200);	//Gives noun1 a value between 0 and 99, providing 100 noun options
-	n2=Math.floor(Math.random() * 200);	//Gives noun2 a value between 0 and 99, providing 100 noun options
-	v1=Math.floor(Math.random() * 400);	//Gives verb1 a value between 0 and 99, providing 100 noun options
-	
-	//Get Adjectives or decide if there will be adjectives
-	o1=Math.floor(Math.random() * 100);
-	if (o1 < 25) {
-		a1 = a2 = -1;
-	}
-	if (o1 >= 25 && o1 < 50) {
-		a1 = Math.floor(Math.random() * 1345);
-		a2 = -1;
-	}
-	if (o1 >= 50 && o1 < 75) {
-		a2 = Math.floor(Math.random() * 1345);
-		a1 = -1;
-	}
-	if (o1 >= 50 && o1 < 75) {
-		a1 = Math.floor(Math.random() * 1345);
-		a2 = Math.floor(Math.random() * 1345);
-	}
-	if (o1 >= 75 && o1 <= 100) {
-		a2 = Math.floor(Math.random() * 1345);
-		a1 = Math.floor(Math.random() * 1345);
-	}
-	
-	//Roll again for o1 to check for expanded sentences
-	o1=Math.floor(Math.random() * 10);
-	if (o1 < 5) {
-		//remove the possibility of expanded sentences
-		n3 = n4 = v2 = a3 = a4 = o2 = o3 = -1;
-	}
-	else {
-		//Set up expanded sentence parts
-		n3=Math.floor(Math.random() * 200);	//Gives noun3 a value between 0 and 99, providing 100 noun options
-		n4=Math.floor(Math.random() * 200);	//Gives noun4 a value between 0 and 99, providing 100 noun options
-		v2=Math.floor(Math.random() * 400);	//Gives verb2 a value between 0 and 99, providing 100 noun options
-		
-		//Get Adjectives or decide if there will be adjectives
-		o2=Math.floor(Math.random() * 100);
-		if (o2 < 25) {
-			a3 = a4 = -1;
-		}
-		if (o2 >= 25 && o2 < 50) {
-			a3 = Math.floor(Math.random() * 1345);
-			a4 = -1;
-		}
-		if (o2 >= 50 && o2 < 75) {
-			a4 = Math.floor(Math.random() * 1345);
-			a3 = -1;
-		}
-		if (o2 >= 50 && o2 < 75) {
-			a3 = Math.floor(Math.random() * 1345);
-			a4 = Math.floor(Math.random() * 1345);
-		}
-		if (o2 >= 75 && o2 <= 100) {
-			a4 = Math.floor(Math.random() * 1345);
-			a3 = Math.floor(Math.random() * 1345);
-		}
-		
-		o3=Math.floor(Math.random() * 10);	//Select the connector word/phrase.
-	}
-	o4=Math.floor(Math.random() * 10);		//Select Plural or Single noun.
-	
-	sentencestructure=Math.floor(Math.random() * 5);	//Select the sentence structure.
-	/*	"A [type] game where..."
-		0: "a [adj] [noun] [verb] a [adj] [noun] while a [adj] [noun] [verb] a [adj] [noun]."
-		1: "a [adj] [noun] [verb] a [adj] [noun] in a [desc] [location] while a [adj] [noun] [verb] a [adj] [noun]."
-		2: "you [verb2a] a [adj] [noun] while you [verb2act] a [adj] [noun]."
-		3: "you [verb2a] a [adj] [noun] in a [desc] [location] while it [verb2act] you."
-		4: "you [verb2a] a [adj] [noun] in a [desc] [location] while a you [verb2act] a [adj] [noun]."
-	*/
-	
 	var typesCall = $.get("values/gametypes.txt", function (data) { types = data.split("\n"); });
 	var nounsCall = $.get("values/nouns.txt", function (data) { nouns = data.split("\n"); });
 	var pluralnounsCall = $.get("values/pluralnouns.txt", function (data) { pnouns = data.split("\n"); });
@@ -109,6 +35,81 @@ function generatevalues(seed, genre) {
 		for (var i = 0; i < locations.length; i++) {
 			locations[i] = locations[i].trim();
 		}
+		
+		gt=Math.floor(Math.random() * types.length);	//Gives game type a value between 0 and 9, providing 10 game type options
+		n1=Math.floor(Math.random() * nouns.length);	//Gives noun1 a value between 0 and 99, providing 100 noun options
+		n2=Math.floor(Math.random() * nouns.length);	//Gives noun2 a value between 0 and 99, providing 100 noun options
+		v1=Math.floor(Math.random() * verbs3rd.length);	//Gives verb1 a value between 0 and 99, providing 100 noun options
+		
+		//Get Adjectives or decide if there will be adjectives
+		o1=Math.floor(Math.random() * 5);
+		if (o1 == 0) {
+			a1 = a2 = -1;
+		}
+		if (o1 == 1) {
+			a1 = Math.floor(Math.random() * adjectives.length);
+			a2 = -1;
+		}
+		if (o1 == 2) {
+			a2 = Math.floor(Math.random() * adjectives.length);
+			a1 = -1;
+		}
+		if (o1 == 3) {
+			a1 = Math.floor(Math.random() * adjectives.length);
+			a2 = Math.floor(Math.random() * adjectives.length);
+		}
+		if (o1 == 4) {
+			a2 = Math.floor(Math.random() * adjectives.length);
+			a1 = Math.floor(Math.random() * adjectives.length);
+		}
+		
+		//Roll again for o1 to check for expanded sentences
+		o1=Math.floor(Math.random() * 10);
+		if (o1 < 5) {
+			//remove the possibility of expanded sentences
+			n3 = n4 = v2 = a3 = a4 = o2 = o3 = -1;
+		}
+		else {
+			//Set up expanded sentence parts
+			n3=Math.floor(Math.random() * nouns.length);	//Gives noun3 a value between 0 and 99, providing 100 noun options
+			n4=Math.floor(Math.random() * nouns.length);	//Gives noun4 a value between 0 and 99, providing 100 noun options
+			v2=Math.floor(Math.random() * verbs3rd.length);	//Gives verb2 a value between 0 and 99, providing 100 noun options
+			
+			//Get Adjectives or decide if there will be adjectives
+			o2=Math.floor(Math.random() * 5);
+			if (o2 == 0) {
+				a3 = a4 = -1;
+			}
+			if (o2 == 1) {
+				a3 = Math.floor(Math.random() * adjectives.length);
+				a4 = -1;
+			}
+			if (o2 == 2) {
+				a4 = Math.floor(Math.random() * adjectives.length);
+				a3 = -1;
+			}
+			if (o2 == 3) {
+				a3 = Math.floor(Math.random() * adjectives.length);
+				a4 = Math.floor(Math.random() * adjectives.length);
+			}
+			if (o2 == 4) {
+				a4 = Math.floor(Math.random() * adjectives.length);
+				a3 = Math.floor(Math.random() * adjectives.length);
+			}
+			
+			o3=Math.floor(Math.random() * 10);	//Select the connector word/phrase.
+		}
+		o4=Math.floor(Math.random() * 10);		//Select Plural or Single noun.
+		
+		sentencestructure=Math.floor(Math.random() * 5);	//Select the sentence structure.
+		/*	"A [type] game where..."
+			0: "a [adj] [noun] [verb] a [adj] [noun] while a [adj] [noun] [verb] a [adj] [noun]."
+			1: "a [adj] [noun] [verb] a [adj] [noun] in a [desc] [location] while a [adj] [noun] [verb] a [adj] [noun]."
+			2: "you [verb2a] a [adj] [noun] while you [verb2act] a [adj] [noun]."
+			3: "you [verb2a] a [adj] [noun] in a [desc] [location] while it [verb2act] you."
+			4: "you [verb2a] a [adj] [noun] in a [desc] [location] while a you [verb2act] a [adj] [noun]."
+		*/
+		
 		if (genre == '') {
 			if (types[gt].substr(0,1)==="a" || types[gt].substr(0,1)==="e" || types[gt].substr(0,1)==="i" || types[gt].substr(0,1)==="o" || types[gt].substr(0,1)==="u") {
 				generatedidea += "An ";
@@ -735,7 +736,7 @@ function generatevalues(seed, genre) {
 		if (o3 < 5) {
 			generatedidea += ".";
 		} else {
-			var add = Math.floor(Math.random() * 66);
+			var add = Math.floor(Math.random() * additions.length);
 			generatedidea += additions[add];
 		}
 		generatedidea += "<br />";

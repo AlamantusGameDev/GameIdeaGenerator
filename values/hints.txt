@@ -1,0 +1,10 @@
+Clicking the game idea text <small>(from a computer)</small> will select all of it so you can copy it more easily!
+Clicking Back in your browser will show previously generated ideas! <small>(You can use the seed recovery under the seed box to get the seed back if it's missing&mdash;<strong>DOES NOT WORK ON IPHONE</strong>)</small>
+Checking the "Lock Genre" box will keep the game type for future idea generations! <small>(It doesn't work retroactively, though)</small>
+Alamantus is super cool. <small>(Be sure to give him lots of money and gifts)</small>
+Clicking that image of dice will give you a brand new seed with a brand new idea <small>(unless you have Lock Genre checked, in which case it will only be <em>mostly</em> brand new).</small>
+RedEyeManiac is pretty cool. <small>(Be sure to give him lots of money and gifts)</small>
+Alamantus built this generator from scratch! <small>(He found a few word lists online that really helped out, though.)</small>
+The Insanity Jam was conceived when Alamantus and RedEyeManiac discovered orteil42 (creator of <em>Cookie Clicker</em>)'s <a href="http://orteil.dashnet.org/gamegen" target="_blank">game idea generator</a>.
+This game idea generator was created to specifically be more tailored to the Insanity Jam as it came to be.
+The name "Insanity Jam" comes from orteil42's idea generator having a checkbox labeled "Sanity". To participate in the first Insanity Jam, you had to uncheck that box to get your idea.

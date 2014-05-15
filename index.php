@@ -22,16 +22,21 @@ if ($seed == "") {
   <script src="js/jquery-1.11.0.min.js"></script>
   <script src="js/seedrandom.min.js"></script>
   <script src="js/generator.js"></script>
+  <script src="js/pagescripts.js"></script>
 </head>
 
 <body>
 <div id="container">
+<div id="centerer">
+<h1 class="centered">Insanity Jam Official Idea Generator</h1>
+</div>
 <form id="setseed" method="post">
 <div id="seedentry">Seed: <input id="seedbox" name="seed" value="<?php echo $seed; ?>" onclick="this.select()" /> <input id="seedchange" type="submit" value="Generate!" />
 <br /><small class="clickable" onclick="javascript:$('#rescuedseed').toggleClass('hidden');">(Click here if the box is blank to recover the seed.)</small><br />
 <span id="rescuedseed" class="hidden" onclick="selectText('rescuedseed')"><?php echo $seed; ?></span>
 </div>
 <div id="genrelock">Lock Genre <input name="genrelock" id="lock" type="checkbox" onclick="if(this.checked){var g=document.getElementById('genre').innerHTML; document.getElementById('genreplaceholder').innerHTML='<input type=\'hidden\' id=\'genrefield\' name=\'genre\' value=\'' + g + '\' />';}else{document.getElementById('genreplaceholder').innerHTML='';}" /><span id="genreplaceholder"></span>
+<script>getGenre();</script>
 </div>
 <div id="rerollbox"><input id="reroll" type="image" src="images/dice.png" name="submit" onclick="document.getElementById('seedbox').value='';" title="Re-Roll">
 </div>
@@ -50,28 +55,18 @@ if ($seed == "") {
 </div>
 
 <div id="hintbox">
-<div id="hint"><h3>Hint:</h3>
-<p id="hinttext">Clicking the text <small>(from a computer)</small> will select it so you can easily copy it!</p>
+<div id="hint"><h3>Random Info:</h3>
+<p id="hinttext"></p>
+<span id="newhint" class="clickable" onclick="javascript:getNewHint();">Get Another!</span>
 </div>
 </div>
 
-  <script>
+</div>
+<script>
 	if ('<?php echo $genrelock; ?>' == 'on') {
 		document.getElementById('lock').checked = "true";
 		document.getElementById('genreplaceholder').innerHTML = "<input type='hidden' id='genrefield' name='genre' value='<?php echo $genre; ?>' />";
 	}
-	function selectText(containerid) {
-        if (document.selection) {
-            var range = document.body.createTextRange();
-            range.moveToElementText(document.getElementById(containerid));
-            range.select();
-        } else if (window.getSelection) {
-            var range = document.createRange();
-            range.selectNode(document.getElementById(containerid));
-            window.getSelection().addRange(range);
-        }
-    }
-  </script>
-</div>
+</script>
 </body>
 </html>
