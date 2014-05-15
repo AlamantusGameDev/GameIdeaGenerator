@@ -12,7 +12,7 @@ if ($seed == "") {
   <meta name="description" content="Custom-built Idea Generator for use in the semi-anual Insanity Jam game development jam.">
   <meta name="author" content="Alamantus GameDev">
 
-  <link rel="stylesheet" href="css/styles.css?v=1.0">
+  <link rel="stylesheet" href="css/styles.css">
 
   <!--[if lt IE 9]>
   <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
@@ -25,12 +25,13 @@ if ($seed == "") {
 <body>
 
 <form id="setseed">
-<p>Seed: <input id="seedbox" name="seed" value="<?php echo $seed; ?>"> <input id="seedchange" type="submit" value="Generate!">
-</p>
+<div id="seedentry">Seed: <input id="seedbox" name="seed" value="<?php echo $seed; ?>"> <input id="seedchange" type="submit" value="Generate!">
+</div>
+<div id="rerollbox"><a href="." title="Re-Roll"><img id="reroll" src="images/dice.png" alt="Re-Roll" /></a>
+</div>
 </form>
-<p style="font-weight:bold;"><a href=".">Re-Roll</a></p>
 
-<div>
+<div id="ideabox">
 	<p id="ideatext">
 	<script>
 		generatevalues('<?php echo $seed; ?>');
