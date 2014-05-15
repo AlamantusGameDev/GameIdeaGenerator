@@ -5,7 +5,7 @@ var a1 = a2 = a3 = a4 = 0;	//adjectives
 var o1 = o2 = o3 = o4 = sentencestructure = 0;	//optional/chance additions
 var types = nouns = pnouns = concepts = verbs2nd = verbs3rd = adjectives = locations = descriptions = additions = [];
 
-function generatevalues(seed) {
+function generatevalues(seed, genre) {
 	var generatedidea = "";
 	
 	if(seed) {
@@ -109,12 +109,22 @@ function generatevalues(seed) {
 		for (var i = 0; i < locations.length; i++) {
 			locations[i] = locations[i].trim();
 		}
-		if (types[gt].substr(0,1)==="a" || types[gt].substr(0,1)==="e" || types[gt].substr(0,1)==="i" || types[gt].substr(0,1)==="o" || types[gt].substr(0,1)==="u") {
-			generatedidea += "An ";
+		if (genre == '') {
+			if (types[gt].substr(0,1)==="a" || types[gt].substr(0,1)==="e" || types[gt].substr(0,1)==="i" || types[gt].substr(0,1)==="o" || types[gt].substr(0,1)==="u") {
+				generatedidea += "An ";
+			} else {
+				generatedidea += "A ";
+			}
+			generatedidea += "<div id='genre'>" + types[gt] + "</div>";
 		} else {
-			generatedidea += "A ";
-		}
-		generatedidea += types[gt] + " game where ";
+			if (genre.substr(0,1)==="a" || genre.substr(0,1)==="e" || genre.substr(0,1)==="i" || genre.substr(0,1)==="o" || genre.substr(0,1)==="u") {
+				generatedidea += "An ";
+			} else {
+				generatedidea += "A ";
+			}
+			generatedidea += "<div id='genre'>" + genre + "</div>";
+		}		
+		generatedidea += " game where ";
 		
 		if (sentencestructure == 0) {
 		/* "A [adj] [noun] [verb] a [adj] [noun] while a [adj] [noun] [verb] a [adj] [noun]." */
