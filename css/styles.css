@@ -1,0 +1,116 @@
+body {
+	font-family: sans-serif;
+}
+h1 {
+	font-size: 1.75em;
+	font-weight: bolder;
+	margin: 10px;
+}
+h2 {
+	font-size: 1.5em;
+	font-weight: bold;
+	margin: 6px;
+}
+h3 {
+	font-size: 1.25em;
+	font-weight: bold;
+	margin: 3px;
+}
+
+img {
+	display: block;
+	border: none;
+	vertical-align: middle;
+}
+small {
+	font-size: 0.75em;
+}
+
+#centerer {
+	display: block;
+	width: 100%;
+}
+.centered {
+	display: block;
+	position: relative;
+	margin-left: auto;
+	margin-right: auto;
+	text-align: center;
+}
+.clickable {
+	cursor: pointer;
+}
+.hidden {
+	display: none !important;
+	visibility: hidden;
+}
+
+#container {
+	width: 99%;
+	height: 95%;
+	position: absolute;
+}
+#setseed {
+	width: 300px;
+	margin: 24px auto;
+}
+#seedentry {
+	display: block;
+	width: 100%;
+	margin: 0 0 10px;
+}
+#rescuedseed {
+	width: 100%;
+	text-align: center;
+	margin: 0 auto;
+	display: block;
+}
+#rerollbox, #rerollbox a {
+	display: block;
+	width: 100%;
+}
+#reroll {
+	display: block;
+	margin: 10px auto;
+}
+#ideabox {
+	display: block;
+	width: 100%;
+}
+#ideacontainer {
+	display: block;
+	width: 75%;
+	margin: 20px auto;
+}
+#ideatext {
+	width: 100%;
+	text-align: center;
+	vertical-align: middle;
+	font-size: 1.75em;
+	font-weight: bolder;
+}
+#genre {
+	display: inline;
+}
+
+#hintbox {
+	display: block;
+	width: 99%;
+	position: absolute;
+	bottom: 5px;
+}
+#hint {
+	display: block;
+	width: 275px;
+	position: relative;
+	margin: 0 auto;
+	text-align: center;
+	font-size: 0.75em;
+}
+#hint p {
+	margin: 3px;
+}
+#newhint {
+	font-style: italic;
+	font-weight: bold;
+}

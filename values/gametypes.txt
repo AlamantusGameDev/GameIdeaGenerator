@@ -1,0 +1,60 @@
+shooter
+brawler
+twin joystick
+bullet hell
+simulator
+stealth
+parkour
+collect-a-thon
+horror
+role-playing
+adventure
+action
+exploration
+atmospheric
+action-adventure
+survival
+turn-based strategy
+real-time strategy
+puzzle
+tycoon
+artsy
+beat-em-up
+hack 'n' slash
+board
+racing
+experimental
+propaganda
+roguelike
+sports
+ball and paddle
+hack and slash
+fighting
+maze
+pinball
+platform
+text-based
+story-based
+role-playing
+action role-playing
+artillery
+tower defense
+casual
+music
+party
+trivia
+pay-to-win
+art
+educational
+open world
+sandbox
+linear
+space
+medieval
+point and click
+sci-fi
+cyberpunk
+one-button
+fantasy
+historical
+rail shooter
