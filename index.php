@@ -1,4 +1,6 @@
 <?php
+$version = "0.8";
+$debug = isset($_GET['debug']) ? true : "";
 $seed = isset($_POST['seed']) ? htmlspecialchars($_POST['seed']) : (string)rand();
 $genrelock = isset($_POST['genrelock']) ? $_POST['genrelock'] : 'off';
 $genre = isset($_POST['genre']) ? $_POST['genre'] : '';
@@ -10,7 +12,7 @@ if ($seed == "") {
 <head>
   <meta charset="utf-8">
 
-  <title>Insanity Jam Official Game Idea Generator, v. 0.7</title>
+  <title>Insanity Jam Official Game Idea Generator, v. <?php echo $version ?></title>
   <meta name="description" content="Custom-built Idea Generator for use in the semi-anual Insanity Jam game development jam.">
   <meta name="author" content="Alamantus GameDev, gamedev@alamantus.com">
   <meta name="web_author" content="Alamantus GameDev, gamedev@alamantus.com">
@@ -32,7 +34,7 @@ if ($seed == "") {
 <body>
 <div id="container">
 <div id="centerer">
-<h1 class="centered">Insanity Jam Official Game Idea Generator<br />v. 0.7</h1>
+<h1 class="centered">Insanity Jam Official Game Idea Generator<br />v. <?php echo $version ?></h1>
 </div>
 <form id="setseed" method="post">
 <div id="seedentry">Seed: <input id="seedbox" name="seed" value="<?php echo $seed; ?>" onclick="this.select()" /> <input id="seedchange" type="submit" value="Generate!" />
@@ -40,7 +42,6 @@ if ($seed == "") {
 <span id="rescuedseed" class="hidden" onclick="selectText('rescuedseed')"><?php echo $seed; ?></span>
 </div>
 <div id="genrelock">Lock Genre <input name="genrelock" id="lock" type="checkbox" onclick="if(this.checked){var g=document.getElementById('genre').innerHTML; document.getElementById('genreplaceholder').innerHTML='<input type=\'hidden\' id=\'genrefield\' name=\'genre\' value=\'' + g + '\' />';}else{document.getElementById('genreplaceholder').innerHTML='';}" /><span id="genreplaceholder"></span>
-<script>getGenre();</script>
 </div>
 <div id="rerollbox"><input id="reroll" type="image" src="images/dice.png" name="submit" onclick="document.getElementById('seedbox').value='';" title="Re-Roll">
 </div>
@@ -51,9 +52,10 @@ if ($seed == "") {
 	<tr><td>
 	<p id="ideatext" onclick="selectText('ideatext')">
 	<script>
-		generatevalues('<?php echo $seed; ?>', '<?php echo $genre; ?>');
+		generatevalues('<?php echo $seed; ?>', '<?php echo $genre; ?>', '<?php echo $debug; ?>');
 	</script>
 	</p>
+	<p id="details"></p>
 	</td></tr>
 </table>
 </div>
