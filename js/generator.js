@@ -888,7 +888,7 @@ function buildSentence5() {
 			break;
 		case 13: generatedidea += " the most beautiful ";
 			break;
-		case 14: generatedidea += " the softest ";
+		case 14: generatedidea += " the most softest ";
 			break;
 		case 15: generatedidea += " the shabbiest ";
 			break;
