@@ -10,9 +10,13 @@ if ($seed == "") {
 <head>
   <meta charset="utf-8">
 
-  <title>Insanity Jam Official Idea Generator</title>
+  <title>Insanity Jam Official Game Idea Generator, v. 0.7</title>
   <meta name="description" content="Custom-built Idea Generator for use in the semi-anual Insanity Jam game development jam.">
-  <meta name="author" content="Alamantus GameDev">
+  <meta name="author" content="Alamantus GameDev, gamedev@alamantus.com">
+  <meta name="web_author" content="Alamantus GameDev, gamedev@alamantus.com">
+  <meta name="robots" content="index, nofollow" />
+  <meta name="language" content="english">
+  <meta name="reply-to" content="gamedev@alamantus.com">
 
   <link rel="stylesheet" href="css/styles.css">
 
@@ -28,7 +32,7 @@ if ($seed == "") {
 <body>
 <div id="container">
 <div id="centerer">
-<h1 class="centered">Insanity Jam Official Idea Generator</h1>
+<h1 class="centered">Insanity Jam Official Game Idea Generator<br />v. 0.7</h1>
 </div>
 <form id="setseed" method="post">
 <div id="seedentry">Seed: <input id="seedbox" name="seed" value="<?php echo $seed; ?>" onclick="this.select()" /> <input id="seedchange" type="submit" value="Generate!" />
