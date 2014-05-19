@@ -1,5 +1,5 @@
 <?php
-$version = "0.85";
+$version = "0.86";
 $debug = isset($_GET['debug']) ? true : "";
 $seed = isset($_POST['seed']) ? htmlspecialchars($_POST['seed']) : (string)rand();
 $genrelock = isset($_POST['genrelock']) ? $_POST['genrelock'] : 'off';
@@ -7,6 +7,8 @@ $genre = isset($_POST['genre']) ? $_POST['genre'] : '';
 if ($seed == "") {
 	$seed = (string)rand();
 }
+
+$root = realpath($_SERVER["DOCUMENT_ROOT"]);
 ?>
 <html lang="en">
 <head>
@@ -20,7 +22,13 @@ if ($seed == "") {
   <meta name="language" content="english">
   <meta name="reply-to" content="gamedev@alamantus.com">
 
-  <link rel="stylesheet" href="css/styles.css">
+  <!--link rel="stylesheet" href="css/styles.css"-->
+  
+    <!-- Bootstrap -->
+    <link href="/css/bootstrap.min.css" rel="stylesheet">
+	
+	<!-- Custom styles for this template -->
+    <link href="/css/jumbotron-custom.css" rel="stylesheet">
 
   <!--[if lt IE 9]>
   <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
@@ -32,48 +40,65 @@ if ($seed == "") {
 </head>
 
 <body>
-<div id="container">
-<div id="centerer">
-<h1 class="centered">Insanity Jam Official Game Idea Generator<br />v. <?php echo $version ?></h1>
-</div>
-<form id="setseed" method="post">
-<div id="seedentry">Seed: <input id="seedbox" name="seed" value="<?php echo $seed; ?>" onclick="this.select()" /> <input id="seedchange" type="submit" value="Generate!" />
-<br /><small class="clickable" onclick="javascript:$('#rescuedseed').toggleClass('hidden');">(Click here if the box is blank to recover the seed.)</small><br />
-<span id="rescuedseed" class="hidden" onclick="selectText('rescuedseed')"><?php echo $seed; ?></span>
-</div>
-<div id="genrelock">Lock Genre <input name="genrelock" id="lock" type="checkbox" onclick="if(this.checked){var g=document.getElementById('genre').innerHTML; document.getElementById('genreplaceholder').innerHTML='<input type=\'hidden\' id=\'genrefield\' name=\'genre\' value=\'' + g + '\' />';}else{document.getElementById('genreplaceholder').innerHTML='';}" /><span id="genreplaceholder"></span>
-</div>
-<div id="rerollbox"><input id="reroll" type="image" src="images/dice.png" name="submit" onclick="document.getElementById('seedbox').value='';" title="Re-Roll">
-</div>
-</form>
+<div class="container">
+<?php require "$root/includes/header.php"; ?>
+<div class="row marketing">
+<div class="panel panel-primary">
+	<div class="panel-heading">
+		<h2 class="center-block text-center">Insanity Jam Official Game Idea Generator<br />v. <?php echo $version ?></h2>
+	</div>
+	<div class="panel-body">
+		
+		<form id="setseed" method="post">
+		<div class="center-block text-center" id="seedentry">Seed: <input id="seedbox" name="seed" value="<?php echo $seed; ?>" onclick="this.select()" /> <input id="seedchange" type="submit" value="Generate!" />
+		<br /><small class="clickable" onclick="javascript:$('#rescuedseed').toggleClass('hidden');">(Click here if the box is blank to recover the seed.)</small><br />
+		<span id="rescuedseed" class="hidden" onclick="selectText('rescuedseed')"><?php echo $seed; ?></span>
+		</div>
+		<div class="center-block text-center" id="genrelock">Lock Genre <input name="genrelock" id="lock" type="checkbox" onclick="if(this.checked){var g=document.getElementById('genre').innerHTML; document.getElementById('genreplaceholder').innerHTML='<input type=\'hidden\' id=\'genrefield\' name=\'genre\' value=\'' + g + '\' />';}else{document.getElementById('genreplaceholder').innerHTML='';}" /><span id="genreplaceholder"></span>
+		</div>
+		<div class="center-block text-center" id="rerollbox"><input id="reroll" type="image" src="images/dice.png" name="submit" onclick="document.getElementById('seedbox').value='';" title="Re-Roll">
+		</div>
+		</form>
 
-<div id="ideabox">
-<table id="ideacontainer">
-	<tr><td>
-	<p id="ideatext" onclick="selectText('ideatext')">
-	<script>
-		generatevalues('<?php echo $seed; ?>', '<?php echo $genre; ?>', '<?php echo $debug; ?>');
-	</script>
-	</p>
-	<p id="details"></p>
-	</td></tr>
-</table>
-</div>
+		<div class="well well-lg bg-bright-green center-block" id="ideabox">
+			<p class="center-block text-center" id="ideatext" onclick="selectText('ideatext')">
+			<script>
+				generatevalues('<?php echo $seed; ?>', '<?php echo $genre; ?>', '<?php echo $debug; ?>');
+			</script>
+			</p>
+			<p id="details"></p>
+		</div>
+		
+		<div class="spacer"></div>
+		<div class="spacer"></div>
+		<div class="spacer"></div>
+		
+		<div class="panel panel-default center-block" id="hintbox">
+			<div class="panel-heading" id="hint">
+				<h3 class="panel-title center-block text-center">Random Info:</h3>
+			</div>
+			<div class="panel-body">
+				<p class="center-block text-center" id="hinttext"></p>
+			</div>
+			<div class="panel-footer">
+				<span class="center-block text-center clickable" id="newhint" onclick="javascript:getNewHint();">Get Another!</span>
+			</div>
+		</div>	<!--Hint Box -->
+		
+	</div>
+	<div class="panel-footer">
+		<p>Problem with the generator? Idea for the generator? Report it to the <a href="https://bitbucket.org/alamantusgamedev/game-idea-generator" target="_blank">Issue Tracker</a>!</p>
+	</div>
+</div>	<!--Primary Panel-->
+</div>	<!--Row-->
 
-<div id="hintbox">
-<div id="hint"><h3>Random Info:</h3>
-<p id="hinttext"></p>
-<span id="newhint" class="clickable" onclick="javascript:getNewHint();">Get Another!</span>
-</div>
-<p>Problem with the generator? Idea for the generator? Report it to the <a href="https://bitbucket.org/alamantusgamedev/game-idea-generator" target="_blank">Issue Tracker</a>!</p>
-</div>
-
-</div>
 <script>
 	if ('<?php echo $genrelock; ?>' == 'on') {
 		document.getElementById('lock').checked = "true";
 		document.getElementById('genreplaceholder').innerHTML = "<input type='hidden' id='genrefield' name='genre' value='<?php echo $genre; ?>' />";
 	}
 </script>
-</body>
-</html>
+
+<?php
+	require "$root/includes/foot.php";
+?>
