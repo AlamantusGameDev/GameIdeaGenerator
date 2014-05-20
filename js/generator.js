@@ -239,12 +239,7 @@ function setGenre(genre) {
 		}
 		generatedidea += types[gt] + " </div>";
 	} else {
-		if (genre.substr(0,1)==="a" || genre.substr(0,1)==="e" || genre.substr(0,1)==="i" || genre.substr(0,1)==="o" || genre.substr(0,1)==="u") {
-			generatedidea += "An ";
-		} else {
-			generatedidea += "A ";
-		}
-		generatedidea += genre + " </div>";
+		generatedidea += genre + " </div>";		//No need to add an article because it is already there.
 	}
 	generatedidea += "game where ";
 }
@@ -889,7 +884,7 @@ function buildSentence5() {
 			break;
 		case 13: generatedidea += " the most beautiful ";
 			break;
-		case 14: generatedidea += " the most softest ";
+		case 14: generatedidea += " the softest ";
 			break;
 		case 15: generatedidea += " the shabbiest ";
 			break;

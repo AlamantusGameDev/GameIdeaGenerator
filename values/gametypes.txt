@@ -20,7 +20,7 @@ puzzle
 tycoon
 artsy
 beat-em-up
-hack 'n' slash
+hack n slash
 board
 racing
 experimental
