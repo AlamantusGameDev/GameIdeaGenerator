@@ -230,22 +230,23 @@ function generateRandomValues() {
 }
 
 function setGenre(genre) {
+	generatedidea += "<div id='genre'>";
 	if (genre == '') {
 		if (types[gt].substr(0,1)==="a" || types[gt].substr(0,1)==="e" || types[gt].substr(0,1)==="i" || types[gt].substr(0,1)==="o" || types[gt].substr(0,1)==="u") {
 			generatedidea += "An ";
 		} else {
 			generatedidea += "A ";
 		}
-		generatedidea += "<div id='genre'>" + types[gt] + "</div>";
+		generatedidea += types[gt] + " </div>";
 	} else {
 		if (genre.substr(0,1)==="a" || genre.substr(0,1)==="e" || genre.substr(0,1)==="i" || genre.substr(0,1)==="o" || genre.substr(0,1)==="u") {
 			generatedidea += "An ";
 		} else {
 			generatedidea += "A ";
 		}
-		generatedidea += "<div id='genre'>" + genre + "</div>";
+		generatedidea += genre + " </div>";
 	}
-	generatedidea += " game where ";
+	generatedidea += "game where ";
 }
 
 function buildSentenceO() {

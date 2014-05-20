@@ -1,8 +1,9 @@
 <?php
-$version = "0.86";
+$version = "0.87";
 $debug = isset($_GET['debug']) ? true : "";
 $seed = isset($_POST['seed']) ? htmlspecialchars($_POST['seed']) : (string)rand();
 $genrelock = isset($_POST['genrelock']) ? $_POST['genrelock'] : 'off';
+$genreremove = isset($_POST['genreremove']) ? $_POST['genreremove'] : 'off';
 $genre = isset($_POST['genre']) ? $_POST['genre'] : '';
 if ($seed == "") {
 	$seed = (string)rand();
@@ -21,8 +22,6 @@ $root = realpath($_SERVER["DOCUMENT_ROOT"]);
   <meta name="robots" content="index, nofollow" />
   <meta name="language" content="english">
   <meta name="reply-to" content="gamedev@alamantus.com">
-
-  <!--link rel="stylesheet" href="css/styles.css"-->
   
     <!-- Bootstrap -->
     <link href="/css/bootstrap.min.css" rel="stylesheet">
@@ -48,13 +47,13 @@ $root = realpath($_SERVER["DOCUMENT_ROOT"]);
 		<h2 class="center-block text-center">Insanity Jam Official Game Idea Generator<br />v. <?php echo $version ?></h2>
 	</div>
 	<div class="panel-body">
-		
 		<form id="setseed" method="post">
 		<div class="center-block text-center" id="seedentry">Seed: <input id="seedbox" name="seed" value="<?php echo $seed; ?>" onclick="this.select()" /> <input id="seedchange" type="submit" value="Generate!" />
 		<br /><small class="clickable" onclick="javascript:$('#rescuedseed').toggleClass('hidden');">(Click here if the box is blank to recover the seed.)</small><br />
 		<span id="rescuedseed" class="hidden" onclick="selectText('rescuedseed')"><?php echo $seed; ?></span>
 		</div>
 		<div class="center-block text-center" id="genrelock">Lock Genre <input name="genrelock" id="lock" type="checkbox" onclick="if(this.checked){var g=document.getElementById('genre').innerHTML; document.getElementById('genreplaceholder').innerHTML='<input type=\'hidden\' id=\'genrefield\' name=\'genre\' value=\'' + g + '\' />';}else{document.getElementById('genreplaceholder').innerHTML='';}" /><span id="genreplaceholder"></span>
+		&nbsp;&nbsp;&nbsp;Remove Genre <input name="genreremove" id="remove" type="checkbox" />
 		</div>
 		<div class="center-block text-center" id="rerollbox"><input id="reroll" type="image" src="images/dice.png" name="submit" onclick="document.getElementById('seedbox').value='';" title="Re-Roll">
 		</div>
@@ -96,6 +95,17 @@ $root = realpath($_SERVER["DOCUMENT_ROOT"]);
 	if ('<?php echo $genrelock; ?>' == 'on') {
 		document.getElementById('lock').checked = "true";
 		document.getElementById('genreplaceholder').innerHTML = "<input type='hidden' id='genrefield' name='genre' value='<?php echo $genre; ?>' />";
+	}
+	function removeGenre() {
+		if (document.getElementById('genre') == null) {
+			setTimeout(removeGenre, 100);
+		} else {
+			document.getElementById('genre').innerHTML = "A ";
+		}
+	}
+	if ('<?php echo $genreremove; ?>' == 'on') {
+		document.getElementById('remove').checked = "true";
+		removeGenre();
 	}
 </script>
 
