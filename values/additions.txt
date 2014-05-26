@@ -1,5 +1,5 @@
 , and it's totally awesome!
-&mdash;at night.
+--at night.
 , but it's pitch black.
 . There's a blind person in there somewhere, too.
 , and nothing happens until you make it happen.
@@ -23,8 +23,8 @@
 , and you can't help but watch.
  until everyone dies.
  until the end of the world.
-&mdash;indefinitely.
-&mdash;forever.
+--indefinitely.
+--forever.
 , but it's really awkward.
 , and it's ridiculously addicting!
 , and you never want to stop playing!
@@ -32,8 +32,8 @@
 . Beautiful.
  in public.
 , but it's all a dream.
-&mdash;in your imagination.
-&mdash;in your dreams.
+--in your imagination.
+--in your dreams.
  until you reach a level cap.
  to try to make everyone happy.
  to try to make everyone think.
@@ -45,7 +45,7 @@
 , and, wait for it... zombies!
 , and, wait for it... robots!
 , and, wait for it... confusion!
-&mdash;with meta-game mechanics.
+--with meta-game mechanics.
 , but the controls are really hard to get the hang of.
 . The controls are super simple.
 , and you can do pretty much whatever you want.
@@ -55,9 +55,9 @@
 , but it's all in your head.
 , but there's not really that much to do.
 , and there's too much that you're able to do.
-&mdash;competitively.
+--competitively.
 , and you have unlimited freedom.
-&mdash;with multiplayer.
+--with multiplayer.
  in order to accomplish some greater goal.
  in order to accomplish some evil goal.
  in order to fulfill some holy prophesy.

@@ -32,17 +32,7 @@ var o1 = o2 = o3 = o4 = sentencestructure = 0;	//optional/chance additions
 var types = nouns = pnouns = concepts = verbs2nd = verbs2ndconcepts = verbs3rd = adjectives = locations = descriptions = additions = [];
 var generatedidea = "";
 
-function generatevalues(seed, genre, debug) {	
-	//Use the seed given to seed the random numbers
-	if(seed) {
-		Math.seedrandom(seed);
-	}
-	//Give a failsafe in case a seed somehow doesn't come over.
-	else {
-		Math.seedrandom();
-	}
-	
-	//Make jquery calls to populate these array variables with all the words from the word lists
+//Make jquery calls to populate these array variables with all the words from the word lists
 	var typesCall = $.get("values/gametypes.txt", function (data) { types = data.split("\n"); });
 	var nounsCall = $.get("values/nouns.txt", function (data) { nouns = data.split("\n"); });
 	var pluralnounsCall = $.get("values/pluralnouns.txt", function (data) { pnouns = data.split("\n"); });
@@ -54,10 +44,22 @@ function generatevalues(seed, genre, debug) {
 	var verbs2ndconceptsCall = $.get("values/verbs2ndconcepts.txt", function (data) { verbs2ndconcepts = data.split("\n"); });
 	var verbs3rdCall = $.get("values/verbs3rd.txt", function (data) { verbs3rd = data.split("\n"); });
 	var additionsCall = $.get("values/additions.txt", function (data) { additions = data.split("\n"); });
+
+function generatevalues(seed, genre, debug) {	
+	//Use the seed given to seed the random numbers
+	if(seed) {
+		Math.seedrandom(seed);
+	}
+	//Give a failsafe in case a seed somehow doesn't come over.
+	else {
+		Math.seedrandom();
+	}
 	
 	//Use jquery $.when to generate only after each of the word list arrays have been filled.
 	$.when(typesCall, nounsCall, pluralnounsCall, conceptsCall, verbs2ndCall, verbs2ndconceptsCall, verbs3rdCall, adjsCall, locsCall, descsCall, additionsCall).done(function () {
-		buildIdea(genre);
+		generatedidea = "";
+      
+      buildIdea(genre, seed);
 		
 		//Debug
 		if (debug) {
@@ -67,7 +69,7 @@ function generatevalues(seed, genre, debug) {
 	});
 }
 
-function buildIdea(genre) {
+function buildIdea(genre, seed) {
 	//Trim whitespace from before/after noun lists to prevent odd spacing in generated sentences.
 	trimWhitespaceFromLists(nouns, pnouns, locations, concepts);
 	
@@ -113,11 +115,13 @@ function buildIdea(genre) {
 		var add = Math.floor(Math.random() * additions.length);
 		generatedidea += additions[add];
 	}
-	generatedidea += "<br />";
+	generatedidea += "<end />";
 	
-	//Put the text in the designated area.
+  	//Put the text in the designated area.
 	var ideaPositionOnPage = document.getElementById('ideatext');
 	ideaPositionOnPage.innerHTML = generatedidea;
+  
+  //setHistory(seed);
 }
 
 function trimWhitespaceFromLists(list1, list2, list3, list4) {
@@ -239,14 +243,30 @@ function setGenre(genre) {
 		}
 		generatedidea += types[gt] + " </div>";
 	} else {
-		if (genre.substr(0,1)==="a" || genre.substr(0,1)==="e" || genre.substr(0,1)==="i" || genre.substr(0,1)==="o" || genre.substr(0,1)==="u") {
-			generatedidea += "An ";
-		} else {
-			generatedidea += "A ";
-		}
-		generatedidea += genre + " </div>";
+		generatedidea += genre + " </div>";		//No need to add an article because it is already there.
 	}
 	generatedidea += "game where ";
+}
+
+function setHistory(seed) {
+	var genHistory = [];
+	var histCookie = getCookie("history");
+	//histCookie = histCookie.substring(0, histCookie.lastIndexOf("<end />"));
+	if (histCookie != "") {
+		genHistory = histCookie.split("<end />");
+	}
+	genHistory.unshift("Seed: " + seed + " - " + generatedidea);
+	histCookie = "Seed: " + seed + " - " + generatedidea + histCookie;
+	setCookie("history",histCookie,0.5);
+	var sel = document.getElementById('history');
+	for(var i = 0; i < genHistory.length; i++) {
+		if (genHistory[i] != "") {
+			var opt = document.createElement('option');
+			opt.innerHTML = genHistory[i];
+			opt.value = genHistory[i];
+			sel.appendChild(opt);
+		}
+	}
 }
 
 function buildSentenceO() {
@@ -889,7 +909,7 @@ function buildSentence5() {
 			break;
 		case 13: generatedidea += " the most beautiful ";
 			break;
-		case 14: generatedidea += " the most softest ";
+		case 14: generatedidea += " the softest ";
 			break;
 		case 15: generatedidea += " the shabbiest ";
 			break;
