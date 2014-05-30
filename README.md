@@ -11,7 +11,7 @@ This version splits the process into helper functions, which makes it easier to 
 * seedrandom.js
 * jquery-1.x.js  (Any jquery, basically. If unchanged, this folder uses jquery-1.11.0.js or jquery-1.11.0.min.js)
 
-Word Lists:
+Word Lists:   
 * values/gametypes.txt
 * values/nouns.txt
 * values/pluralnouns.txt
