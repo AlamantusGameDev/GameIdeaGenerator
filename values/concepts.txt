@@ -1,70 +1,301 @@
-time
-people
-love
-hatred
-security
-fortitude
-wellness
-dependence
-independence
-freedom
-depression
-sanity
-insanity
-The Man
-things
-your feelings
-life
-your life
-the world
-death
-your death
-ruin
-decay
-entropy
-peace
-patience
-world peace
-school
-education
-the idea of family
-The Motherland
-The Fatherland
-problems
-a hard case
-existentialism
-capitalism
-communism
-fascism
-liberalism
-democracy
-patriotism
-fanatism
-work
-the government
-money
-facts
-fiction
-rights
-human rights
+abandonment
+abortion
+absurdity
+abundance
+abuse
+acceptance
+accessibility
+accountability
+action
+addiction
+adolescence
+adultery
+adulthood
+adventure
+advertisement
+affection
+agriculture
+anger
+apathy
+archaeology
+archaism
+archery
+aristocracy
+art
+astrology
+astronomy
+bacteria
+baptism
+barbarism
+beauty
+beer
+begging
+belief
+benevolence
 Big Business
+bigotry
+biology
+birth control
+blasphemy
+bloodlust
+bloodshed
+boasting
+botany
+breakfast
+bureaucracy
+calamity
+calculus
+calligraphy
+calmness
+camouflage
+cancer
+canon
+capitalism
+captivity
+carpentry
+cartoons
+celebration
+censorship
+ceremonies
+change
+charity
+chivalry
+chores
+Christendom
+circumcision
+civilization
+claustrophobia
+cleaning
+clichés
+coersion
+coexistence
+colonialism
+combat
+comedy
+commercialism
+communication
+communism
+compartmentalism
+compromise
+confederacy
+conflict
+conformity
+confusion
+conservation
+conservatism
+consistency
+contempt
+controversy
+convenience
+cooperation
+corruption
+crucifixion
+curiosity
+cynicism
+dancing
+danger
+darkness
+death
+debauchery
+debt
+decay
+defeatism
+defiance
+democracy
+dentistry
+dependence
+depravity
+depression
+despotism
+destiny
+diplomacy
+disaster
+discord
+discovery
+diversity
+divorce
+dogmatism
+drama
+drugs
+education
+efficiency
+electricity
+embezzlement
+enlightenment
+entropy
+equality
+evolution
+existentialism
+facts
+fame
+fanaticism
+fantasy
+fascism
+fear
+feminism
+feudalism
+fiction
+force
+fortitude
+freedom
+friendship
+fundamentalism
+galvanism
+gambling
+gender roles
+generalizations
+generocity
+genocide
+geocentrism
+geology
+geometry
+glory
+gossip
+graffiti
+gravity
+greed
+grief
+guilt
+hatred
+hedonism
+herbology
+heresy
+heroism
+hindsight
+history
+homicide
+hope
+hostility
+human rights
+hunger
+idealism
+imagination
+immaturity
+immigration
+immodesty
+immorality
+immortality
+immunization
+impatience
+imperfect complexion
+imperfect justice
+imperfection
+imperialism
+impressionism
+impurity
+inaction
+indecision
+independence
+indifference
+indigestion
+individualism
+indoctrination
+inefficiency
+innuendo
+insanity
+insomnia
+inspiration
+isolation
 issues
-service
+jealousy
+journalism
+joy
+justice
+knowledge
+liberalism
+liberty
+life
+liquor
+logic
+love
+machinery
+makeup
+misogyny
+misrepresentation
+mistakes
+modernism
+money
+morals
+neglect
+nihilism
+nirvana
+noise
+nonconformity
+nonsense
+nostalgia
+novelty
+objectification
+oblivion
+obscenity
+omnipotence
+optimism
+patience
+patriotism
+peace
+people
+perfection
+permanence
+pessimism
+philosophy
+photorealism
+physics
+pity
+plagiarism
+pollution
 power
-the law
-your community
-the president
-ideas
+powerlessness
+preparedness
+problems
+profanity
+puberty
+rain
+rampant corruption
+reading
+reality
+reason
+redundancy
+regret
+rights
+ruin
+safety
+sanity
+sarcasm
+school
+secrecy
+security
+self-gratification
+service
+socialism
+strange power
+the caste system
+The Crusades
+The Devil
+The Fatherland
+the government
+the idea of family
 the Information Superhighway
 the Internet
-art
+the law
+The Man
+The Moon
+The Motherland
+The Plague
+the president
+the world
+theocracy
+things
+time
+traditions
+trivia
+trust
+unlimited bandwidth
 war
-history
-reason
-force
-gravity
-grief
-joy
-strange power
-powerlessness
-rampant corruption
+wellness
+witty banter
+work
+world peace
+worship
+your community
+your death
+your feelings
+your life

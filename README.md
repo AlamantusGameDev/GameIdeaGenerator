@@ -1,17 +1,20 @@
 # README #
 
 Insanity Jam Game Idea Generator   
-Version 0.87
+Version 1.0
 
 Hosted at [http://www.insanityjam.com/idea](http://www.insanityjam.com/idea)
 
 Takes a seed and randomly generates a sentence by selecting random words from several word lists and by randomly selecting a sentence structure to place the words into.
-This version splits the process into helper functions, which makes it easier to add more sentence structures in the future.
+This version has a completed set of word lists.
 
 ###Dependencies###
 
-* seedrandom.js
-* jquery-1.x.js  (Any jquery, basically. If unchanged, this folder uses jquery-1.11.0.js or jquery-1.11.0.min.js)   
+* [http://www.getbootstrap.com](Twitter Bootstrap) in a css folder at root. (Index also references a custom bootstrap css file called "jumbotron-custom.css", which is not included.)
+* js/generator.js
+* js/seedrandom.js
+* js/jquery-1.x.js  (Any jquery, basically. If unchanged, this folder uses jquery-1.11.0.js or jquery-1.11.0.min.js)   
+* js/pagescripts.js
 * values/gametypes.txt
 * values/nouns.txt
 * values/pluralnouns.txt

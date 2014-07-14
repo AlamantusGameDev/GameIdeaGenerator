@@ -1,200 +1,291 @@
-castle
-crevasse
-cubicle
-telephone wire
-ethernet cable
-computer monitor
-power cord
-cardboard box
+abbey
+aircraft carrier
+alcove
+allegory
+alley
+altar
+alternate dimension
+amusement park
+anarchy
+apartment complex
+archaeological dig
+archipelago
+aristocracy
+assylum
+attic
+badminton court
+bakery
+balcony
+barn
+barrack
+barrel
+baseball field
+basement
+basket
+basketball court
+bathroom
+battlefield
+battleground
+battlezone
+bazaar
+beach
+beachhead
+bedroom
+beehive
 bin
-trash can
-pile of garbage
-dump
+blizzard
+bubble
+cabana
+cabaret
+cabin
+cabinet
+cafe
+cafeteria
+cage
 can
-can of soup
 can of beans
 can of peas
-supermarket
-produce aisle
-department store
-street
-alcove
-cove
-mortuary
+can of soup
+cannery
+canyon
+car
+cardboard box
+carriage
+carrier
+castle
+cathedral
+cave
+cellar
 cemetary
+chamber
+chapel
+cinema
+cistern
+city
+classroom
+cliff
+cloud
+cloud city
+clown school
+cockpit
+colony
+compound
+computer screen
+concert hall
+corral
+correctional facility
+courthouse
+courtyard
+cove
+crater
+crawlspace
+crevasse
+crypt
+cubby
+cubbyhole
+cubicle
+cupboard
+cyberworld
+deck
+den
+department store
+desert
+dictatorship
+dictionary
+dimensional portal
+ditch
+dock
+doghouse
+dollhouse
+dormitory
+dream
+drugstore
+dugout
+dump
+dungeon
+electromagnet
+elevator
+encyclopedia
+erupting volcano
+ethernet cable
+farm
+farmhouse
+fish pond
+fishery
+flashback
+forest
+forge
+fort
+forum
+fountain
+freeway
+frontier
+funeral home
+furnace
+gallery
+garage
+garden
+garrison
+ghetto
+glacier
+grassland
+graveyard
+greenhouse
+grocery store
+grove
+guardhouse
+gulf
+gully
+gutter
+gym
+hall
+hallway
+hamlet
+hangar
+harbor
+hideaway
+hideout
+high school
+highway
+hill
 hospital
-bathroom
-shower
-sewer
-piping system
+hot tub
+hotel
+house
+hovel
+impact site
+improv studio
+inn
+island
+isle
+jail
+jukebox
+jungle
+junkyard
+kitchen
+laboratory
+labyrinth
+lagoon
+lake
+lavatory
+library
+living room
+locker room
+lodge
+lookout tower
+lounge
+madhouse
+mainframe
+mall
+maple tree
+market
+marketplace
+maze
+meadow
 mess of wires
-cave
-city
-meadow
-wasteland
-warzone
-house
-apartment complex
-yard
-ocean
-bathtub
-forest
-mountain
-living room
-bedroom
-basement
-kitchen
-plaza
-mall
-hotel
-pit
-canyon
-monarchy
-garden
 military base
-battlezone
+mine
+mineshaft
+monarchy
+monastery
+moon
+mosque
+motel
+mountain
+museum
+newsstand
+nightclub
+nursery
+oak tree
+ocean
+office
+orchard
+orphanage
+outpost
+pagoda
+palace
+palm tree
+parking lot
+party
+peninsula
+penthouse
 pet store
-stadium
-cyberworld
-mainframe
-video game
-car
-aircraft carrier
+pharmasy
+picnic
+pier
+pile of garbage
+pine tree
+pipeline
+piping system
+pit
+planetarium
+planetoid
+plateau
+platform
+playroom
+plaza
+police department
+pond
+poplar tree
+portal
+power cord
+power plant
+prison
+produce aisle
+pub
+pulpit
+purification chamber
+pyramid
+quarry
+racetrack
+railroad
+rehab center
+resort
+restaurant
+river
+road
+room
+rose bush
+runway
+salon
+saloon
+sawmill
+school
+sculpture
+sea
+seacoast
+sewer
+shack
+shop
+shower
+skyline
 speedboat
-apartment complex
-yard
-ocean
-bathtub
-forest
-mountain
-living room
-bedroom
-basement
-kitchen
-plaza
-mall
-hotel
-pit
-canyon
-monarchy
-garden
-military base
-cave
-city
-meadow
-wasteland
-warzone
-house
-apartment complex
-yard
-ocean
-bathtub
-forest
-mountain
-living room
-bedroom
-basement
-kitchen
-plaza
-mall
-hotel
-pit
-canyon
-monarchy
-garden
-military base
-battlezone
-pet store
+stable
 stadium
-cyberworld
-mainframe
+stage
+storehouse
+storeroom
+street
+studio
+suburb
+subway
+supermarket
+swamp
+synagogue
+telephone wire
+tollhouse
+tomb
+tower
+town
+trash can
+valley
 video game
-car
-aircraft carrier
-speedboat
-apartment complex
-yard
-ocean
-bathtub
-forest
-mountain
-living room
-bedroom
-basement
-kitchen
-plaza
-mall
-hotel
-pit
-canyon
-monarchy
-cave
-city
-meadow
-wasteland
+village
+vineyard
+volcano
+warehouse
 warzone
-house
-apartment complex
-yard
-ocean
-bathtub
-forest
-mountain
-living room
-bedroom
-basement
-kitchen
-plaza
-mall
-hotel
-pit
-canyon
-monarchy
-garden
-military base
-battlezone
-pet store
-stadium
-cyberworld
-mainframe
-video game
-car
-aircraft carrier
-speedboat
-apartment complex
-yard
-ocean
-bathtub
-forest
-mountain
-living room
-bedroom
-basement
-kitchen
-plaza
-mall
-hotel
-pit
-canyon
-monarchy
-garden
-military base
-cave
-city
-meadow
 wasteland
-warzone
-house
-apartment complex
+windmill
 yard
-ocean
-bathtub
-forest
-mountain
-living room
-bedroom
-basement
-kitchen
-plaza
-mall
-hotel
+zeppelin
